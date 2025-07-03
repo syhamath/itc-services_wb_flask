@@ -1,0 +1,35 @@
+<svg width="50" height="50" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1fa2d6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3c5a6b;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main IT letters -->
+  <!-- Letter I -->
+  <path d="M50 60 L50 140 L80 140 L80 120 L70 120 L70 80 L80 80 L80 60 Z" fill="url(#logoGradient)"/>
+  
+  <!-- Letter T -->
+  <path d="M120 60 L120 80 L140 80 L140 140 L160 140 L160 80 L180 80 L180 60 Z" fill="url(#logoGradient)"/>
+  
+  <!-- Network dots and connections -->
+  <circle cx="40" cy="40" r="4" fill="#1fa2d6"/>
+  <circle cx="160" cy="40" r="4" fill="#1fa2d6"/>
+  <circle cx="40" cy="160" r="4" fill="#1fa2d6"/>
+  <circle cx="160" cy="160" r="4" fill="#1fa2d6"/>
+  <circle cx="100" cy="30" r="3" fill="#87ceeb"/>
+  <circle cx="100" cy="170" r="3" fill="#87ceeb"/>
+  <circle cx="30" cy="100" r="3" fill="#87ceeb"/>
+  <circle cx="170" cy="100" r="3" fill="#87ceeb"/>
+  
+  <!-- Connection lines -->
+  <line x1="44" y1="44" x2="96" y2="34" stroke="#1fa2d6" stroke-width="2" opacity="0.6"/>
+  <line x1="156" y1="44" x2="104" y2="34" stroke="#1fa2d6" stroke-width="2" opacity="0.6"/>
+  <line x1="44" y1="156" x2="96" y2="166" stroke="#1fa2d6" stroke-width="2" opacity="0.6"/>
+  <line x1="156" y1="156" x2="104" y2="166" stroke="#1fa2d6" stroke-width="2" opacity="0.6"/>
+  <line x1="34" y1="96" x2="44" y2="44" stroke="#1fa2d6" stroke-width="2" opacity="0.4"/>
+  <line x1="166" y1="96" x2="156" y2="44" stroke="#1fa2d6" stroke-width="2" opacity="0.4"/>
+  <line x1="34" y1="104" x2="44" y2="156" stroke="#1fa2d6" stroke-width="2" opacity="0.4"/>
+  <line x1="166" y1="104" x2="156" y2="156" stroke="#1fa2d6" stroke-width="2" opacity="0.4"/>
+</svg>
