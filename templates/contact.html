@@ -1,0 +1,183 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact - IT Consulting{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <!-- Page Header -->
+    <div class="row mb-5">
+        <div class="col-12 text-center">
+            <h1 class="display-4 fw-bold">Contact Us</h1>
+            <p class="lead text-muted">Ready to start your next project? Get in touch with our team</p>
+        </div>
+    </div>
+
+    <div class="row g-5">
+        <!-- Contact Form -->
+        <div class="col-lg-8">
+            <div class="card border-0 shadow">
+                <div class="card-body p-5">
+                    <h3 class="card-title fw-bold mb-4">
+                        <i class="fas fa-paper-plane text-primary me-2"></i>
+                        Send Us a Message
+                    </h3>
+                    
+                    <form method="POST" action="{{ url_for('contact') }}">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="name" class="form-label">Full Name *</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="subject" class="form-label">Subject</label>
+                                <select class="form-select" id="subject" name="subject">
+                                    <option value="">Select a service...</option>
+                                    <option value="Digital Development">Digital Development</option>
+                                    <option value="Training Programs">Training Programs</option>
+                                    <option value="Geo-localisation">Geo-localisation</option>
+                                    <option value="IT Consultancy">IT Consultancy & PM</option>
+                                    <option value="Partnership">Partnership Opportunity</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea class="form-control" id="message" name="message" rows="6" placeholder="Tell us about your project or requirements..." required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <i class="fas fa-paper-plane me-2"></i>Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="col-lg-4">
+            <div class="card border-0 shadow h-100">
+                <div class="card-body p-5">
+                    <h3 class="card-title fw-bold mb-4">
+                        <i class="fas fa-address-card text-primary me-2"></i>
+                        Contact Information
+                    </h3>
+
+                    <div class="contact-info">
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-envelope text-primary me-3"></i>
+                                <h6 class="mb-0">Email</h6>
+                            </div>
+                            <a href="mailto:contact@it-consulting-mr.com" class="text-decoration-none">
+                                contact@it-consulting-mr.com
+                            </a>
+                        </div>
+
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fab fa-whatsapp text-success me-3"></i>
+                                <h6 class="mb-0">WhatsApp</h6>
+                            </div>
+                            <a href="https://wa.me/33333323130" class="text-decoration-none" target="_blank">
+                                +333 33 32 31 30
+                            </a>
+                        </div>
+
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-clock text-primary me-3"></i>
+                                <h6 class="mb-0">Business Hours</h6>
+                            </div>
+                            <div class="text-muted">
+                                <div>Monday - Friday: 8:00 AM - 6:00 PM</div>
+                                <div>Saturday: 9:00 AM - 2:00 PM</div>
+                                <div>Sunday: Closed</div>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-bolt text-primary me-3"></i>
+                                <h6 class="mb-0">Response Time</h6>
+                            </div>
+                            <div class="text-muted">
+                                We typically respond within 24 hours
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="my-4">
+
+                    <div class="text-center">
+                        <h6 class="fw-bold mb-3">Follow Us</h6>
+                        <div class="d-flex justify-content-center gap-3">
+                            <a href="#" class="btn btn-outline-primary btn-sm">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="btn btn-outline-primary btn-sm">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="btn btn-outline-primary btn-sm">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <h2 class="display-6 fw-bold text-center mb-5">Frequently Asked Questions</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            What services do you offer?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We offer a comprehensive range of IT services including digital development (web & app development, UI/UX design), training programs (AI, Office 365, general IT skills), geo-localisation solutions (fleet management), and IT consultancy & project management.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            How long does a typical project take?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Project timelines vary depending on scope and complexity. Simple websites may take 2-4 weeks, while complex applications can take 3-6 months. We provide detailed project timelines during the initial consultation.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                            Do you provide ongoing support?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, we offer comprehensive ongoing support and maintenance services. This includes regular updates, security patches, performance optimization, and technical support to ensure your systems run smoothly.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

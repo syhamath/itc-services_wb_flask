@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+
+{% block title %}Partners - IT Consulting{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <!-- Page Header -->
+    <div class="row mb-5">
+        <div class="col-12 text-center">
+            <h1 class="display-4 fw-bold">Our Partners</h1>
+            <p class="lead text-muted">We work with industry leaders to deliver exceptional results</p>
+        </div>
+    </div>
+
+    <!-- Partners Grid -->
+    <div class="row g-4">
+        <!-- APM Terminals -->
+        <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow text-center">
+                <div class="card-body p-4">
+                    <div class="mb-3">
+                        <i class="fas fa-ship fa-3x text-primary"></i>
+                    </div>
+                    <h5 class="card-title fw-bold">APM Terminals</h5>
+                    <p class="card-text text-muted">
+                        Global port operator and gateway services provider, part of A.P. Moller-Maersk Group.
+                    </p>
+                    <div class="mt-3">
+                        <span class="badge bg-primary">Logistics</span>
+                        <span class="badge bg-secondary">Maritime</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Maersk Line -->
+        <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow text-center">
+                <div class="card-body p-4">
+                    <div class="mb-3">
+                        <i class="fas fa-anchor fa-3x text-primary"></i>
+                    </div>
+                    <h5 class="card-title fw-bold">Maersk Line</h5>
+                    <p class="card-text text-muted">
+                        World's largest container shipping company, providing integrated logistics solutions globally.
+                    </p>
+                    <div class="mt-3">
+                        <span class="badge bg-primary">Shipping</span>
+                        <span class="badge bg-secondary">Logistics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- IT Mobile Afrique -->
+        <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow text-center">
+                <div class="card-body p-4">
+                    <div class="mb-3">
+                        <i class="fas fa-mobile-alt fa-3x text-primary"></i>
+                    </div>
+                    <h5 class="card-title fw-bold">IT Mobile Afrique</h5>
+                    <p class="card-text text-muted">
+                        Leading mobile technology solutions provider specializing in African markets and mobile innovation.
+                    </p>
+                    <div class="mt-3">
+                        <span class="badge bg-primary">Mobile Tech</span>
+                        <span class="badge bg-secondary">Innovation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Iris Afrique -->
+        <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow text-center">
+                <div class="card-body p-4">
+                    <div class="mb-3">
+                        <i class="fas fa-eye fa-3x text-primary"></i>
+                    </div>
+                    <h5 class="card-title fw-bold">Iris Afrique</h5>
+                    <p class="card-text text-muted">
+                        Technology solutions provider focusing on digital transformation and business intelligence in Africa.
+                    </p>
+                    <div class="mt-3">
+                        <span class="badge bg-primary">Digital</span>
+                        <span class="badge bg-secondary">Analytics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Partnership Benefits -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <div class="bg-dark p-5 rounded">
+                <h2 class="text-light fw-bold text-center mb-5">Partnership Benefits</h2>
+                <div class="row g-4">
+                    <div class="col-md-4 text-center">
+                        <i class="fas fa-handshake fa-2x text-primary mb-3"></i>
+                        <h5 class="text-light">Collaborative Approach</h5>
+                        <p class="text-muted">We work closely with our partners to deliver integrated solutions that exceed expectations.</p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <i class="fas fa-globe fa-2x text-primary mb-3"></i>
+                        <h5 class="text-light">Global Reach</h5>
+                        <p class="text-muted">Our partnership network spans across continents, enabling worldwide project delivery.</p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <i class="fas fa-award fa-2x text-primary mb-3"></i>
+                        <h5 class="text-light">Industry Expertise</h5>
+                        <p class="text-muted">Combined expertise across multiple industries ensures comprehensive solution delivery.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Become a Partner -->
+    <div class="row mt-5">
+        <div class="col-12 text-center">
+            <h2 class="display-5 fw-bold mb-4">Interested in Partnering With Us?</h2>
+            <p class="lead text-muted mb-4">Join our network of trusted partners and grow your business with us</p>
+            <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg">
+                <i class="fas fa-plus me-2"></i>Become a Partner
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
