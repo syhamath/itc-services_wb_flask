@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 
-{% block title %}Partners - IT Consulting{% endblock %}
+{% block title %}{% if lang == 'fr' %}Partenaires - IT Consulting{% else %}Partners - IT Consulting{% endif %}{% endblock %}
 
 {% block content %}
 <div class="container py-5">
     <!-- Page Header -->
     <div class="row mb-5">
         <div class="col-12 text-center">
-            <h1 class="display-4 fw-bold">Our Partners</h1>
-            <p class="lead text-muted">We work with industry leaders to deliver exceptional results</p>
+            <h1 class="display-4 fw-bold">{% if lang == 'fr' %}Nos Partenaires{% else %}Our Partners{% endif %}</h1>
+            <p class="lead text-muted">{% if lang == 'fr' %}Nous travaillons avec les leaders de l'industrie pour offrir des résultats exceptionnels{% else %}We work with industry leaders to deliver exceptional results{% endif %}</p>
         </div>
     </div>
 

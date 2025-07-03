@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 
-{% block title %}Contact - IT Consulting{% endblock %}
+{% block title %}{% if lang == 'fr' %}Contact - IT Consulting{% else %}Contact - IT Consulting{% endif %}{% endblock %}
 
 {% block content %}
 <div class="container py-5">
     <!-- Page Header -->
     <div class="row mb-5">
         <div class="col-12 text-center">
-            <h1 class="display-4 fw-bold">Contact Us</h1>
-            <p class="lead text-muted">Ready to start your next project? Get in touch with our team</p>
+            <h1 class="display-4 fw-bold">{% if lang == 'fr' %}Contactez-Nous{% else %}Contact Us{% endif %}</h1>
+            <p class="lead text-muted">{% if lang == 'fr' %}Prêt à démarrer votre prochain projet? Contactez notre équipe{% else %}Ready to start your next project? Get in touch with our team{% endif %}</p>
         </div>
     </div>
 
@@ -19,38 +19,48 @@
                 <div class="card-body p-5">
                     <h3 class="card-title fw-bold mb-4">
                         <i class="fas fa-paper-plane text-primary me-2"></i>
-                        Send Us a Message
+                        {% if lang == 'fr' %}Envoyez-nous un Message{% else %}Send Us a Message{% endif %}
                     </h3>
                     
                     <form method="POST" action="{{ url_for('contact') }}">
                         <div class="row g-3">
                             <div class="col-md-6">
-                                <label for="name" class="form-label">Full Name *</label>
+                                <label for="name" class="form-label">{% if lang == 'fr' %}Nom Complet *{% else %}Full Name *{% endif %}</label>
                                 <input type="text" class="form-control" id="name" name="name" required>
                             </div>
                             <div class="col-md-6">
-                                <label for="email" class="form-label">Email Address *</label>
+                                <label for="email" class="form-label">{% if lang == 'fr' %}Adresse Email *{% else %}Email Address *{% endif %}</label>
                                 <input type="email" class="form-control" id="email" name="email" required>
                             </div>
                             <div class="col-12">
-                                <label for="subject" class="form-label">Subject</label>
+                                <label for="subject" class="form-label">{% if lang == 'fr' %}Sujet{% else %}Subject{% endif %}</label>
                                 <select class="form-select" id="subject" name="subject">
-                                    <option value="">Select a service...</option>
-                                    <option value="Digital Development">Digital Development</option>
-                                    <option value="Training Programs">Training Programs</option>
-                                    <option value="Geo-localisation">Geo-localisation</option>
-                                    <option value="IT Consultancy">IT Consultancy & PM</option>
-                                    <option value="Partnership">Partnership Opportunity</option>
-                                    <option value="Other">Other</option>
+                                    {% if lang == 'fr' %}
+                                        <option value="">Sélectionnez un service...</option>
+                                        <option value="Digital Development">Développement Digital</option>
+                                        <option value="Training Programs">Programmes de Formation</option>
+                                        <option value="Geo-localisation">Géo-localisation</option>
+                                        <option value="IT Consultancy">Conseil IT & Gestion de Projet</option>
+                                        <option value="Partnership">Opportunité de Partenariat</option>
+                                        <option value="Other">Autre</option>
+                                    {% else %}
+                                        <option value="">Select a service...</option>
+                                        <option value="Digital Development">Digital Development</option>
+                                        <option value="Training Programs">Training Programs</option>
+                                        <option value="Geo-localisation">Geo-localisation</option>
+                                        <option value="IT Consultancy">IT Consultancy & PM</option>
+                                        <option value="Partnership">Partnership Opportunity</option>
+                                        <option value="Other">Other</option>
+                                    {% endif %}
                                 </select>
                             </div>
                             <div class="col-12">
-                                <label for="message" class="form-label">Message *</label>
-                                <textarea class="form-control" id="message" name="message" rows="6" placeholder="Tell us about your project or requirements..." required></textarea>
+                                <label for="message" class="form-label">{% if lang == 'fr' %}Message *{% else %}Message *{% endif %}</label>
+                                <textarea class="form-control" id="message" name="message" rows="6" placeholder="{% if lang == 'fr' %}Parlez-nous de votre projet ou de vos exigences...{% else %}Tell us about your project or requirements...{% endif %}" required></textarea>
                             </div>
                             <div class="col-12">
                                 <button type="submit" class="btn btn-primary btn-lg">
-                                    <i class="fas fa-paper-plane me-2"></i>Send Message
+                                    <i class="fas fa-paper-plane me-2"></i>{% if lang == 'fr' %}Envoyer le Message{% else %}Send Message{% endif %}
                                 </button>
                             </div>
                         </div>
@@ -65,7 +75,7 @@
                 <div class="card-body p-5">
                     <h3 class="card-title fw-bold mb-4">
                         <i class="fas fa-address-card text-primary me-2"></i>
-                        Contact Information
+                        {% if lang == 'fr' %}Informations de Contact{% else %}Contact Information{% endif %}
                     </h3>
 
                     <div class="contact-info">
@@ -92,22 +102,28 @@
                         <div class="mb-4">
                             <div class="d-flex align-items-center mb-2">
                                 <i class="fas fa-clock text-primary me-3"></i>
-                                <h6 class="mb-0">Business Hours</h6>
+                                <h6 class="mb-0">{% if lang == 'fr' %}Heures d'Ouverture{% else %}Business Hours{% endif %}</h6>
                             </div>
                             <div class="text-muted">
-                                <div>Monday - Friday: 8:00 AM - 6:00 PM</div>
-                                <div>Saturday: 9:00 AM - 2:00 PM</div>
-                                <div>Sunday: Closed</div>
+                                {% if lang == 'fr' %}
+                                    <div>Lundi - Vendredi: 8h00 - 18h00</div>
+                                    <div>Samedi: 9h00 - 14h00</div>
+                                    <div>Dimanche: Fermé</div>
+                                {% else %}
+                                    <div>Monday - Friday: 8:00 AM - 6:00 PM</div>
+                                    <div>Saturday: 9:00 AM - 2:00 PM</div>
+                                    <div>Sunday: Closed</div>
+                                {% endif %}
                             </div>
                         </div>
 
                         <div class="mb-4">
                             <div class="d-flex align-items-center mb-2">
                                 <i class="fas fa-bolt text-primary me-3"></i>
-                                <h6 class="mb-0">Response Time</h6>
+                                <h6 class="mb-0">{% if lang == 'fr' %}Temps de Réponse{% else %}Response Time{% endif %}</h6>
                             </div>
                             <div class="text-muted">
-                                We typically respond within 24 hours
+                                {% if lang == 'fr' %}Nous répondons généralement dans les 24 heures{% else %}We typically respond within 24 hours{% endif %}
                             </div>
                         </div>
                     </div>

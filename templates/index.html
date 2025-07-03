@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Home - IT Consulting Services{% endblock %}
+{% block title %}{% if lang == 'fr' %}Accueil - IT Consulting Services{% else %}Home - IT Consulting Services{% endif %}{% endblock %}
 
 {% block content %}
 <!-- Hero Section -->
@@ -9,18 +9,27 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <h1 class="display-4 fw-bold text-white mb-4">
-                    Transform Your Business with Expert IT Consulting Services
+                    {% if lang == 'fr' %}
+                        Transformez Votre Entreprise avec des Services de Conseil IT Experts
+                    {% else %}
+                        Transform Your Business with Expert IT Consulting Services
+                    {% endif %}
                 </h1>
                 <p class="lead mb-4 text-white">
-                    IT Consulting Services provides comprehensive IT consulting solutions to help your business thrive in the digital age. 
-                    From web development to AI training, we've got you covered.
+                    {% if lang == 'fr' %}
+                        IT Consulting Services fournit des solutions complètes de conseil en informatique pour aider votre entreprise à prospérer à l'ère numérique. 
+                        Du développement web à la formation en IA, nous vous accompagnons.
+                    {% else %}
+                        IT Consulting Services provides comprehensive IT consulting solutions to help your business thrive in the digital age. 
+                        From web development to AI training, we've got you covered.
+                    {% endif %}
                 </p>
                 <div class="d-flex gap-3">
                     <a href="{{ url_for('services') }}" class="btn btn-primary btn-lg">
-                        <i class="fas fa-arrow-right me-2"></i>Our Services
+                        <i class="fas fa-arrow-right me-2"></i>{% if lang == 'fr' %}Nos Services{% else %}Our Services{% endif %}
                     </a>
                     <a href="{{ url_for('contact') }}" class="btn btn-outline-secondary btn-lg">
-                        <i class="fas fa-phone me-2"></i>Get Started
+                        <i class="fas fa-phone me-2"></i>{% if lang == 'fr' %}Commencer{% else %}Get Started{% endif %}
                     </a>
                 </div>
             </div>
@@ -38,8 +47,8 @@
     <div class="container">
         <div class="row">
             <div class="col-12 text-center mb-5">
-                <h2 class="display-5 fw-bold">What We Offer</h2>
-                <p class="lead text-muted">Comprehensive IT solutions for modern businesses</p>
+                <h2 class="display-5 fw-bold">{% if lang == 'fr' %}Ce Que Nous Offrons{% else %}What We Offer{% endif %}</h2>
+                <p class="lead text-muted">{% if lang == 'fr' %}Solutions informatiques complètes pour les entreprises modernes{% else %}Comprehensive IT solutions for modern businesses{% endif %}</p>
             </div>
         </div>
         
@@ -48,8 +57,8 @@
                 <div class="card h-100 border-0 shadow-sm">
                     <div class="card-body text-center">
                         <i class="fas fa-code display-4 text-primary mb-3"></i>
-                        <h5 class="card-title">Digital Development</h5>
-                        <p class="card-text text-muted">Web & app development, UI/UX design tailored to your needs</p>
+                        <h5 class="card-title">{% if lang == 'fr' %}Développement Digital{% else %}Digital Development{% endif %}</h5>
+                        <p class="card-text text-muted">{% if lang == 'fr' %}Développement web et d'applications, conception UI/UX adaptée à vos besoins{% else %}Web & app development, UI/UX design tailored to your needs{% endif %}</p>
                     </div>
                 </div>
             </div>
@@ -58,8 +67,8 @@
                 <div class="card h-100 border-0 shadow-sm">
                     <div class="card-body text-center">
                         <i class="fas fa-graduation-cap display-4 text-primary mb-3"></i>
-                        <h5 class="card-title">Training Programs</h5>
-                        <p class="card-text text-muted">AI, Office 365, and general IT skills training</p>
+                        <h5 class="card-title">{% if lang == 'fr' %}Programmes de Formation{% else %}Training Programs{% endif %}</h5>
+                        <p class="card-text text-muted">{% if lang == 'fr' %}Formation en IA, Office 365 et compétences informatiques générales{% else %}AI, Office 365, and general IT skills training{% endif %}</p>
                     </div>
                 </div>
             </div>
@@ -68,8 +77,8 @@
                 <div class="card h-100 border-0 shadow-sm">
                     <div class="card-body text-center">
                         <i class="fas fa-map-marker-alt display-4 text-primary mb-3"></i>
-                        <h5 class="card-title">Geo-localisation</h5>
-                        <p class="card-text text-muted">Fleet management and tracking solutions</p>
+                        <h5 class="card-title">{% if lang == 'fr' %}Géo-localisation{% else %}Geo-localisation{% endif %}</h5>
+                        <p class="card-text text-muted">{% if lang == 'fr' %}Solutions de gestion et de suivi de flotte{% else %}Fleet management and tracking solutions{% endif %}</p>
                     </div>
                 </div>
             </div>
@@ -78,8 +87,8 @@
                 <div class="card h-100 border-0 shadow-sm">
                     <div class="card-body text-center">
                         <i class="fas fa-chart-line display-4 text-primary mb-3"></i>
-                        <h5 class="card-title">IT Consultancy</h5>
-                        <p class="card-text text-muted">Strategic IT consulting and project management</p>
+                        <h5 class="card-title">{% if lang == 'fr' %}Conseil IT{% else %}IT Consultancy{% endif %}</h5>
+                        <p class="card-text text-muted">{% if lang == 'fr' %}Conseil stratégique en informatique et gestion de projet{% else %}Strategic IT consulting and project management{% endif %}</p>
                     </div>
                 </div>
             </div>
@@ -92,8 +101,8 @@
     <div class="container">
         <div class="row">
             <div class="col-12 text-center mb-5">
-                <h2 class="display-5 fw-bold text-dark">Why Choose IT Consulting Services</h2>
-                <p class="lead text-muted">We deliver results that matter</p>
+                <h2 class="display-5 fw-bold text-dark">{% if lang == 'fr' %}Pourquoi Choisir IT Consulting Services{% else %}Why Choose IT Consulting Services{% endif %}</h2>
+                <p class="lead text-muted">{% if lang == 'fr' %}Nous livrons des résultats qui comptent{% else %}We deliver results that matter{% endif %}</p>
             </div>
         </div>
         
@@ -101,24 +110,24 @@
             <div class="col-md-4">
                 <div class="text-center">
                     <i class="fas fa-users display-4 text-primary mb-3"></i>
-                    <h4 class="text-dark">Expert Team</h4>
-                    <p class="text-muted">Our experienced professionals bring deep expertise in modern IT solutions</p>
+                    <h4 class="text-dark">{% if lang == 'fr' %}Équipe Experte{% else %}Expert Team{% endif %}</h4>
+                    <p class="text-muted">{% if lang == 'fr' %}Nos professionnels expérimentés apportent une expertise approfondie en solutions informatiques modernes{% else %}Our experienced professionals bring deep expertise in modern IT solutions{% endif %}</p>
                 </div>
             </div>
             
             <div class="col-md-4">
                 <div class="text-center">
                     <i class="fas fa-clock display-4 text-primary mb-3"></i>
-                    <h4 class="text-dark">Timely Delivery</h4>
-                    <p class="text-muted">We understand the importance of deadlines and deliver projects on time</p>
+                    <h4 class="text-dark">{% if lang == 'fr' %}Livraison Ponctuelle{% else %}Timely Delivery{% endif %}</h4>
+                    <p class="text-muted">{% if lang == 'fr' %}Nous comprenons l'importance des délais et livrons les projets à temps{% else %}We understand the importance of deadlines and deliver projects on time{% endif %}</p>
                 </div>
             </div>
             
             <div class="col-md-4">
                 <div class="text-center">
                     <i class="fas fa-shield-alt display-4 text-primary mb-3"></i>
-                    <h4 class="text-dark">Quality Assurance</h4>
-                    <p class="text-muted">Every project undergoes rigorous testing and quality checks</p>
+                    <h4 class="text-dark">{% if lang == 'fr' %}Assurance Qualité{% else %}Quality Assurance{% endif %}</h4>
+                    <p class="text-muted">{% if lang == 'fr' %}Chaque projet fait l'objet de tests rigoureux et de contrôles qualité{% else %}Every project undergoes rigorous testing and quality checks{% endif %}</p>
                 </div>
             </div>
         </div>
@@ -130,10 +139,10 @@
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
-                <h2 class="display-5 fw-bold mb-4">Ready to Transform Your Business?</h2>
-                <p class="lead mb-4">Let's discuss how we can help you achieve your IT goals</p>
+                <h2 class="display-5 fw-bold mb-4">{% if lang == 'fr' %}Prêt à Transformer Votre Entreprise?{% else %}Ready to Transform Your Business?{% endif %}</h2>
+                <p class="lead mb-4">{% if lang == 'fr' %}Discutons de la façon dont nous pouvons vous aider à atteindre vos objectifs informatiques{% else %}Let's discuss how we can help you achieve your IT goals{% endif %}</p>
                 <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg">
-                    <i class="fas fa-rocket me-2"></i>Start Your Project
+                    <i class="fas fa-rocket me-2"></i>{% if lang == 'fr' %}Commencer Votre Projet{% else %}Start Your Project{% endif %}
                 </a>
             </div>
         </div>

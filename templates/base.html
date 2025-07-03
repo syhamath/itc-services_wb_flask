@@ -34,22 +34,22 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link {{ 'active' if request.endpoint == 'index' }}" href="{{ url_for('index') }}">
-                            <i class="fas fa-home me-1"></i>Home
+                            <i class="fas fa-home me-1"></i>{% if lang == 'fr' %}Accueil{% else %}Home{% endif %}
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ 'active' if request.endpoint == 'services' }}" href="{{ url_for('services') }}">
-                            <i class="fas fa-cogs me-1"></i>Services
+                            <i class="fas fa-cogs me-1"></i>{% if lang == 'fr' %}Services{% else %}Services{% endif %}
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ 'active' if request.endpoint == 'partners' }}" href="{{ url_for('partners') }}">
-                            <i class="fas fa-handshake me-1"></i>Partners
+                            <i class="fas fa-handshake me-1"></i>{% if lang == 'fr' %}Partenaires{% else %}Partners{% endif %}
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ 'active' if request.endpoint == 'contact' }}" href="{{ url_for('contact') }}">
-                            <i class="fas fa-envelope me-1"></i>Contact
+                            <i class="fas fa-envelope me-1"></i>{% if lang == 'fr' %}Contact{% else %}Contact{% endif %}
                         </a>
                     </li>
                 </ul>
