@@ -1,5 +1,5 @@
-from flask import render_template, request, flash, redirect, url_for
-from app import app
+from flask import render_template, request, flash, redirect, url_for, session
+from app import app, get_locale
 import logging
 
 # Configure logging for debugging
@@ -9,6 +9,13 @@ logging.basicConfig(level=logging.DEBUG)
 def index():
     """Homepage with hero section and company introduction"""
     return render_template("index.html")
+
+@app.route("/set_language/<language>")
+def set_language(language):
+    """Set the language preference"""
+    if language in app.config['LANGUAGES']:
+        session['language'] = language
+    return redirect(request.referrer or url_for('index'))
 
 @app.route("/services")
 def services():

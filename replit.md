@@ -88,7 +88,15 @@ This is a Flask-based web application for an IT consulting company. The applicat
 
 ## Changelog
 - July 03, 2025. Initial setup
+- July 03, 2025. Updated branding to "IT Consulting Services" with new logo
+- July 03, 2025. Changed from dark theme to light theme for better visibility
+- July 03, 2025. Added language selector (English/French) functionality
+- July 03, 2025. Updated color scheme to match logo (blue tones)
 
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+Company name: IT Consulting Services
+Logo: Uses the provided logo with blue and gray colors
+Theme: Light theme with blue color scheme from logo
+Languages: English (EN) and French (FR) selector
